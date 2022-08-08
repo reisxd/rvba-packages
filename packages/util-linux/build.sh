@@ -13,7 +13,7 @@ TERMUX_PKG_VERSION=2.38
 TERMUX_PKG_SRCURL=https://www.kernel.org/pub/linux/utils/util-linux/v${TERMUX_PKG_VERSION:0:4}/util-linux-${TERMUX_PKG_VERSION}.tar.xz
 TERMUX_PKG_SHA256=6d111cbe4d55b336db2f1fbeffbc65b89908704c01136371d32aa9bec373eb64
 # libcrypt is required for only newgrp and sulogin, which are not built anyways
-TERMUX_PKG_DEPENDS="libcap-ng, libsmartcols, ncurses, zlib"
+TERMUX_PKG_DEPENDS="libcap-ng, libsmartcols, libuuid, ncurses, zlib"
 TERMUX_PKG_ESSENTIAL=true
 TERMUX_PKG_BREAKS="util-linux-dev"
 TERMUX_PKG_REPLACES="util-linux-dev"
@@ -31,7 +31,6 @@ ac_cv_func_uselocale=no
 --disable-ipcs
 --disable-kill
 --disable-last
---disable-libuuid
 --disable-logger
 --disable-mesg
 --disable-nologin
