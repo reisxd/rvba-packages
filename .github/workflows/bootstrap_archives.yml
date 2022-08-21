@@ -22,7 +22,7 @@ jobs:
       - name: Git clone
         uses: actions/checkout@v3
       - name: Create bootstrap archive
-        run: ./scripts/generate-bootstraps.sh --architectures ${{ matrix.arch }}
+        run: ./scripts/run-docker.sh ./scripts/build-bootstraps.sh --architectures ${{ matrix.arch }}
       - name: Store artifacts
         uses: actions/upload-artifact@v3
         with:
