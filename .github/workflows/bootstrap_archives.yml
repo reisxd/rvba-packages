@@ -17,8 +17,7 @@ jobs:
         arch:
           - aarch64
           - arm
-          - i686
-          - x86_64
+
     steps:
       - name: Git clone
         uses: actions/checkout@v3
